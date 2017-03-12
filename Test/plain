@@ -1,0 +1,2 @@
+The total number of elements successfully written is returned.
+If this number differs from the count parameter, a writing error prevented the function from completing. In this case, the error indicator (ferror) will be set for the stream.
