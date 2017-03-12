@@ -7,8 +7,8 @@ int main(int argc, char const *argv[]) {
   unsigned char iv[16] = { 14, 31, 6, 126, 18, 12, 36, 70, 100, 9, 42, 51, 111, 84, 3, 25 };
   unsigned char iv2[16] = { 14, 31, 6, 126, 18, 12, 36, 70, 100, 9, 42, 51, 111, 84, 3, 25 };
 
-//  encrypt("Test/plain", "Test/enc", key, iv);
-//  decrypt("Test/enc", "Test/dec", key, iv2);
+  encrypt("Test/plain", "Test/enc", key, iv);
+  decrypt("Test/enc", "Test/dec", key, iv2);
 
   hash512("Test/plain", "Test/hash");
   hash512("Test/plain", "Test/hash");
