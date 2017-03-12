@@ -11,8 +11,8 @@ int main(int argc, char const *argv[]) {
   decrypt("Test/enc", "Test/dec", key, iv2);
 
   hash512("Test/plain", "Test/hash");
-  hash512("Test/plain", "Test/hash");
   printf("%d\n", verifyHash512("Test/plain", "Test/hash"));
+  printf("%d\n", verifyHash512("Test/enc", "Test/hash"));
 
 
   return 0;

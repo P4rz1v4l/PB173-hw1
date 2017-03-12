@@ -2,8 +2,7 @@
 
 using namespace std;
 
-bool file_exist(const char *fileName)
-{
+bool file_exist(const char *fileName) {
     std::ifstream file(fileName);
     return file.is_open();
 }
@@ -125,6 +124,9 @@ int verifyHash512(const char *input, const char *hashFile) {
   unsigned char *hash = new unsigned char[64]();
   mbedtls_sha512(contetnt, str.length(), hash, SHA512);
 
+  if (!file_exist(hashFile)) {
+    return HASH_FILE_NOT_EXIST;
+  }
   ifstream fileHash(hashFile);
   string oldHash((istreambuf_iterator<char>(fileHash)), istreambuf_iterator<char>());
 
